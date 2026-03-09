@@ -1,0 +1,27 @@
+{
+  "name": "shadcn-vue-skill",
+  "version": "1.0.0",
+  "description": "MCP skill server for shadcn-vue — expert guide for building Vue.js UIs with shadcn-vue",
+  "main": "index.js",
+  "bin": {
+    "shadcn-vue-skill": "index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "mcp",
+    "shadcn-vue",
+    "vue",
+    "claude",
+    "skill"
+  ],
+  "author": "renatomonteiro",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

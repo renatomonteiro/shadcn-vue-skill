@@ -22,6 +22,51 @@ references/
 
 ## Install
 
+### Claude Code CLI (and other MCP clients)
+
+Use `npx` to add this skill as an MCP server. The server exposes all skill content (main guide + all reference files) as readable resources over the Model Context Protocol.
+
+**Claude Code CLI (one-time setup):**
+
+```sh
+claude mcp add shadcn-vue-skill --scope user -- npx -y shadcn-vue-skill
+```
+
+Or add it manually to `~/.claude/settings.json` (user-wide) or `.mcp.json` (project-local):
+
+```json
+{
+  "mcpServers": {
+    "shadcn-vue-skill": {
+      "command": "npx",
+      "args": ["-y", "shadcn-vue-skill"]
+    }
+  }
+}
+```
+
+**Claude Desktop:**
+
+Add the following to your Claude Desktop config file:
+
+- macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
+- Windows: `%APPDATA%\Claude\claude_desktop_config.json`
+
+```json
+{
+  "mcpServers": {
+    "shadcn-vue-skill": {
+      "command": "npx",
+      "args": ["-y", "shadcn-vue-skill"]
+    }
+  }
+}
+```
+
+Restart Claude after updating the config. Verify with `/mcp` in Claude Code or by asking Claude about the available shadcn-vue resources.
+
+### Claude.ai (Cowork)
+
 Download `shadcn-vue.skill` and click **"Copy to your skills"** in Claude Cowork.
 
 ## Benchmark
